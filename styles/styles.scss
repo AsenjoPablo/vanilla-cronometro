@@ -1,0 +1,135 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to top left, rgb(78, 78, 189), rgb(238, 59, 59));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 2rem 4rem;
+    border-radius: 16px;
+    box-shadow:
+    inset 2px 2px 4px 4px rgba($color: #fff, $alpha: .2),
+    inset -2px -2px 4px 4px rgba($color: #000000, $alpha: .2);
+}
+
+.chrono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    margin-bottom: 2rem;
+    letter-spacing: .25rem;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: .5rem;
+    border-bottom: solid 2px #353535;
+}
+
+.time-wrapper {
+    background-color: #353535;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+    inset 2px 2px 4px 4px rgba($color: #fff, $alpha: .2),
+    inset -2px -2px 4px 4px rgba($color: #000000, $alpha: .2);
+}
+
+.time-wrapper > span {
+    color: rgb(82, 255, 82);
+    font-family: Orbitron;
+    font-size: 2rem;
+    letter-spacing: .25rem;
+}
+
+.time-wrapper > #minutes {
+    text-align: right;
+}
+
+.time-wrapper > #seconds, #minutes {
+    width: 90px;
+}
+
+.buttons-wrapper {
+    display: flex;
+    gap: .5rem;
+}
+
+.btn-clock {
+    background-color: rgb(88, 88, 187);
+    cursor: pointer;
+    box-shadow:
+    inset 2px 2px 4px 4px rgba($color: #fff, $alpha: .2),
+    inset -2px -2px 4px 4px rgba($color: #000000, $alpha: .2);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    $btn-size: 48px;
+    height: $btn-size;
+    width: $btn-size;
+    display: grid;
+    place-items: center;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        opacity: .8;
+    }
+
+    &:active {
+        transform: scale(.9);
+    }
+
+    &#stop-button {
+        background-color: red;
+    }
+}
+
+.btn-clock[disabled]{
+    opacity: .5;
+}
+
+.btn__icon {
+    $icon-size: 24px;
+    height: $icon-size;
+    width: $icon-size;
+}
+
+.splits__group {
+    max-height: 200px;
+    overflow: scroll;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    grid-template-columns: repeat(3, 1fr);
+}

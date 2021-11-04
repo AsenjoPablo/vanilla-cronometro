@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro by Pablo A</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <div class="chrono">
+            <h1 class="title">Cronómetro</h1>
+            <div class="time-wrapper">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </div>
+
+            <div class="buttons-wrapper">
+                <button class="btn-clock" id="start-button">
+                    <img class="btn__icon" src="assets/play.svg" alt="play button">
+                </button>
+
+                <button style="display: none;" class="btn-clock" id="pause-button">
+                    <img class="btn__icon" src="assets/pause.svg" alt="pause button">
+                </button>
+
+                <button class="btn-clock" id="stop-button" disabled>
+                    <img class="btn__icon" src="assets/stop.svg" alt="stop button">
+                </button>
+
+                <button class="btn-clock" id="split-button" disabled>
+                    <img class="btn__icon" src="assets/split.svg" alt="split button">
+                </button>
+            </div>
+        </div>
+
+        <ul id="splits-group" class="splits__group">
+        </ul>
+    </div>
+
+    <script src="scripts/cronometro.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
